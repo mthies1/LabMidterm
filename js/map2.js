@@ -32,6 +32,10 @@ var streamgaugeurl = "http://waterwatch.usgs.gov/index.php?m=real&w=kml&r=us&reg
 var floodurl = "http://waterwatch.usgs.gov/download/?gt=map&mt=flood&st=08&dt=site&ht=&fmt=kml";
     var flood = new KMLLayer(floodurl);
     map.addLayer(flood);
+    
+var precipurl = "nowcoast_analysis_meteohydro_sfc_qpe_time.kml";
+    var precip = new KMLLayer(precipurl);
+    map.addLayer(precip);
 
   var toggle = new BasemapToggle({
     map:map,
