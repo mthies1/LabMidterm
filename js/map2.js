@@ -25,9 +25,13 @@ require([
 //for KML look for a "KML feed, .kml link, load from GitHub, not USB or computer ***
 //http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_month_age_link.kml
 
-var kmlUrl = "http://waterwatch.usgs.gov/index.php?m=real&w=kml&r=us&regions=all";
-    var kml = new KMLLayer(kmlUrl);
-    map.addLayer(kml);
+var streamgaugeurl = "http://waterwatch.usgs.gov/index.php?m=real&w=kml&r=us&regions=all2";
+    var streamgauge = new KMLLayer(streamgaugeurl);
+    map.addLayer(streamgauge);
+
+var floodurl = "http://waterwatch.usgs.gov/download/?gt=map&mt=flood&st=08&dt=site&ht=&fmt=kml";
+    var flood = new KMLLayer(floodurl);
+    map.addLayer(flood);
 
   var toggle = new BasemapToggle({
     map:map,
