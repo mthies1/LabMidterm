@@ -33,7 +33,7 @@ var floodurl = "http://waterwatch.usgs.gov/download/?gt=map&mt=flood&st=08&dt=si
     var flood = new KMLLayer(floodurl);
     map.addLayer(flood);
     
-var precipurl = "nowcoast_analysis_meteohydro_sfc_qpe_time.kml";
+var precipurl = "http://nowcoast.noaa.gov/arcgis/rest/services/nowcoast/analysis_meteohydro_sfc_qpe_time/MapServer/kml/mapImage.kmz";
     var precip = new KMLLayer(precipurl);
     map.addLayer(precip);
 
