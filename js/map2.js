@@ -22,10 +22,10 @@ require([
     center: [-91, 30.5],
     zoom: 6
   });
-//for KML look for a "KML feed, .kml link
+//for KML look for a "KML feed, .kml link, load from GitHub, not USB or computer ***
 //http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_month_age_link.kml
 
-var kmlUrl = "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_month_age_link.kml";
+var kmlUrl = "http://waterwatch.usgs.gov/index.php?m=real&w=kml&r=us&regions=all";
     var kml = new KMLLayer(kmlUrl);
     map.addLayer(kml);
 
