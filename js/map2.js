@@ -33,7 +33,7 @@ var floodurl = "http://waterwatch.usgs.gov/download/?gt=map&mt=flood&st=08&dt=si
     var flood = new KMLLayer(floodurl);
     map.addLayer(flood);
     
-var precipurl = "http://catalog.data.gov/dataset/2013-fema-flood-control-structures/resource/5308e117-1cd0-4150-8821-1d2cb4da9a8f";
+var precipurl = "http://gstore.unm.edu/apps/rgis/datasets/d93688b6-eece-4253-a6e8-5b18c8834bef/S_GEN_STRUCT.derived.kml";
     var precip = new KMLLayer(precipurl);
     map.addLayer(precip);
 
