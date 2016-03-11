@@ -33,7 +33,7 @@ var floodurl = "http://waterwatch.usgs.gov/download/?gt=map&mt=flood&st=08&dt=si
     var flood = new KMLLayer(floodurl);
     map.addLayer(flood);
     
-var femaurl = "http://gstore.unm.edu/apps/rgis/datasets/d93688b6-eece-4253-a6e8-5b18c8834bef/S_GEN_STRUCT.derived.kml";
+var femaurl = "http://www.srh.noaa.gov/gis/kml/cocorahs/cocorahsLink.kml";
     var fema = new KMLLayer(femaurl);
     map.addLayer(fema);
 
