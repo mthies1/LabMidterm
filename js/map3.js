@@ -16,4 +16,3 @@ function initMap() {
  map.data.loadGeoJson('http://data.wake.opendata.arcgis.com/datasets/e971bec1f1d94c9d927548b6d45455d4_0.geojson');
  map.data.loadGeoJson('http://data.wake.opendata.arcgis.com/datasets/e10e1fafe835491db6d68b5ececa7d66_0.geojson');
  }
-//
