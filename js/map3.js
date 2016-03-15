@@ -5,7 +5,7 @@ var map;
 function initMap() {
  map = new google.maps.Map(document.getElementById('map'), {
    zoom: 10,
-   center: {lat: 35.74, lng: -78.64},
+   center: {lat: 35.80, lng: -78.64},
  });
  
  map.data.loadGeoJson('http://data.wake.opendata.arcgis.com/datasets/e971bec1f1d94c9d927548b6d45455d4_0.geojson');
