@@ -9,12 +9,12 @@ function initMap() {
    //zoomControl: true
  });
  
+ map.data.loadGeoJson('http://data.wake.opendata.arcgis.com/datasets/e971bec1f1d94c9d927548b6d45455d4_0.geojson');
+ 
  var ctaLayer = new google.maps.KmlLayer({
    url: 'http://waterservices.usgs.gov/nwis/site/?format=ge,1.0&countyCd=37183&siteOutput=expanded&seriesCatalogOutput=true&outputDataTypeCd=iv,dv,qw&siteType=LK,ST,WE',
    preserveViewport: true,
    map: map
  });
- 
-map.data.loadGeoJson('http://data.wake.opendata.arcgis.com/datasets/e971bec1f1d94c9d927548b6d45455d4_0.geojson');
  
 }
