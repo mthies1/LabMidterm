@@ -5,7 +5,7 @@ var map;
 function initMap() {
  map = new google.maps.Map(document.getElementById('map'), {
    zoom: 10,
-   center: {lat: 34.0, lng: -78.64}
+   center: {lat: 33.5, lng: -78.64}
    //zoomControl: true
  });
  // map.data.loadGeoJson('http://waterservices.usgs.gov/nwis/iv/?format=json&stateCd=la&parameterCd=00060,00065&siteType=ST');
