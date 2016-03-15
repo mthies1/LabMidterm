@@ -11,6 +11,7 @@ function initMap() {
  
  var ctaLayer = new google.maps.KmlLayer({
    url: 'http://waterservices.usgs.gov/nwis/site/?format=ge,1.0&countyCd=37183&siteOutput=expanded&seriesCatalogOutput=true&outputDataTypeCd=iv,dv,qw&siteType=LK,ST,WE',
+   preserveViewport: true,
    map: map
  });
  
