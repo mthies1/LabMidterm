@@ -15,9 +15,8 @@ var infowindow = new google.maps.InfoWindow();
  * and then display the infowindow with details about that earthquake.
  */
 map.data.addListener('click', function(event) {
-  // in the geojson feature that was clicked, get the "place" and "mag" attributes
   var shed = event.feature.getProperty("PROPWS");
-  var status = event.feature.getProperty("NON_CRIT");
+  var status = event.feature.getProperty("CRIT_NON");
   var html = shed + ' watershed, status: ' + status; 
   infowindow.setContent(html); // show the html variable in the infowindow
   infowindow.setPosition(event.feature.getGeometry().get()); // anchor the infowindow at the marker
