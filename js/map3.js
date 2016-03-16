@@ -8,8 +8,20 @@ function initMap() {
    center: {lat: 35.80, lng: -78.64},
  });
  
- //map.data.loadGeoJson('http://data.wake.opendata.arcgis.com/datasets/e971bec1f1d94c9d927548b6d45455d4_0.geojson');
- //map.data.loadGeoJson('http://data.wake.opendata.arcgis.com/datasets/e10e1fafe835491db6d68b5ececa7d66_0.geojson');
+ map.data.loadGeoJson('http://data.wake.opendata.arcgis.com/datasets/e971bec1f1d94c9d927548b6d45455d4_0.geojson');
+
+var popup = new google.maps.InfoWindow();
+
+map.data.addListener('click', function(event) {
+  var name = event.feature.getProperty("PROPWS");
+  var status = event.feature.getProperty("CRIT_NON");
+  var html = 'Name: ' + name + 'Status: ' + status; 
+  popup.setContent(html); // show the html variable in the infowindow
+  popup.setPosition(event.feature.getGeometry().get()); // anchor the infowindow at the marker
+  popup.setOptions({pixelOffset: new google.maps.Size(0,-30)}); // move the infowindow up slightly to the top of the marker icon
+  popup.open(map);
+});
+
  map.data.loadGeoJson('http://data.wake.opendata.arcgis.com/datasets/65477520a8b949689ec8f804b48cba2f_0.geojson');
  
  // Create an infowindow object to use later
