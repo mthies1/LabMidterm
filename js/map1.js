@@ -1,10 +1,9 @@
-//JavaScript file for Assignment 3 - utilizing Leaflet layers from external Web Mapping Services
-
-
+//JavaScript file for Map 1 of Midterm Assignment - utilizing Leaflet layers from external Web Mapping Services
+//Leaflet Map
+//WMS Data
 
 //Create a map object and set the initial view with Lat, Long, and Zoom level
-var map = L.map('map').setView([30.5, -91], 7);
-
+var map = L.map('map').setView([39.83, -98.5], 3);
 
 
 //Create a baselayer variable with street view for use in the controls, but not to be viewed initially on the map
@@ -20,7 +19,6 @@ var base = L.tileLayer('http://otile{s}.mqcdn.com/tiles/1.0.0/{type}/{z}/{x}/{y}
 	attribution: 'Tiles Courtesy of <a href="http://www.mapquest.com/">MapQuest</a> &mdash; Portions Courtesy NASA/JPL-Caltech and U.S. Depart. of Agriculture, Farm Service Agency',
 	subdomains: '1234'
 }).addTo(map);   //add layer to map
-
 
 
 //Create a WMS layer object showing the current radar from NOAA web service data
