@@ -23,7 +23,7 @@ map.data.addListener('click', function(event) {
   var use = event.feature.getProperty("PRIMARY_US");
   var html = 'Type: ' + type + 'Primary Use: ' + use; 
   infowindow.setContent(html); // show the html variable in the infowindow
-  infowindow.setPosition(event.Feature.getGeometry().get()); // anchor the infowindow at the marker
+  infowindow.setPosition(event.feature.getGeometry().get()); // anchor the infowindow at the marker
   infowindow.setOptions({pixelOffset: new google.maps.Size(0,-30)}); // move the infowindow up slightly to the top of the marker icon
   infowindow.open(map);
 });
