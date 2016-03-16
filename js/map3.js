@@ -1,5 +1,12 @@
 
 
+function addmypopup(feature, layer)
+	{
+		msg = Feature.properties.PROPWS + "<br>" + "<br>" + 
+		"STATUS: " + Feature.properties.CRIT_NON + "<br>" + 
+		"MORE INFO: " + '<a href="http://data.wake.opendata.arcgis.com/datasets/e971bec1f1d94c9d927548b6d45455d4_0"></a>';
+		layer.bindPopup(msg);
+	}
 
 var map;
 function initMap() {
@@ -17,3 +24,5 @@ function initMap() {
  });
  
 }
+
+L.geoJson(geojsonFeature, {onEachFeature: addmypopup}).addTo(map);
