@@ -13,7 +13,7 @@ html, body {
  
 #BasemapToggle {
   position: absolute;
-  top: 90px;
+  top: 120px;
   right: 20px;
   z-index: 50;
 }
