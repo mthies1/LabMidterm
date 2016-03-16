@@ -3,7 +3,7 @@
 //WMS Data
 
 //Create a map object and set the initial view with Lat, Long, and Zoom level
-var map = L.map('map').setView([39.83, -98.5], 3);
+var map = L.map('map').setView([39.83, -98.5], 5);
 
 
 //Create a baselayer variable with street view for use in the controls, but not to be viewed initially on the map
