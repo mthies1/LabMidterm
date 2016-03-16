@@ -24,11 +24,11 @@ map.data.addListener('click', function(event) {
   infowindow.open(map);
 });
  
- var ctaLayer = new google.maps.KmlLayer({
+ var sitequality = new google.maps.KmlLayer({
    url: 'http://waterservices.usgs.gov/nwis/site/?format=ge,1.0&countyCd=37183&siteOutput=expanded&seriesCatalogOutput=true&outputDataTypeCd=iv,dv,qw&siteType=LK,ST,WE',
-   preserveViewport: true,
-   map: map
+   preserveViewport: true
  });
+ sitequality.setMap( map );
  
 }
 
