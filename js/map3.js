@@ -22,7 +22,7 @@ map.data.addListener('click', function(event) {
   popup.open(map);
 });
 
- map.data.loadGeoJson('http://data.wake.opendata.arcgis.com/datasets/65477520a8b949689ec8f804b48cba2f_0.geojson');
+ map.data.loadGeoJson('http://data.wake.opendata.arcgis.com/datasets/27e2ef9d7b33435c820e7fbb286aa4bf_0.geojson');
  
  // Create an infowindow object to use later
 var infowindow = new google.maps.InfoWindow();
@@ -31,9 +31,10 @@ var infowindow = new google.maps.InfoWindow();
  * and then display the infowindow with details about that earthquake.
  */
 map.data.addListener('click', function(event) {
-  var type = event.feature.getProperty("TYPE");
-  var use = event.feature.getProperty("PRIMARY_US");
-  var html = 'Type: ' + type + 'Primary Use: ' + use; 
+  var name = event.feature.getProperty("NAME");
+  var address = event.feature.getProperty("ADDRESS");
+  var url = event.feature.getProperty("URL");
+  var html = name +'</br>' + address +'<br/>' + 'Visit us: ' + url; 
   infowindow.setContent(html); // show the html variable in the infowindow
   infowindow.setPosition(event.feature.getGeometry().get()); // anchor the infowindow at the marker
   infowindow.setOptions({pixelOffset: new google.maps.Size(0,-30)}); // move the infowindow up slightly to the top of the marker icon
