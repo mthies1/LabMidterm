@@ -25,7 +25,7 @@ map.data.addListener('click', function(event) {
   var name = event.feature.getProperty("NAME");
   var address = event.feature.getProperty("ADDRESS");
   var url = event.feature.getProperty("URL");
-  var html = name +'</br>' + address +'<br/>' + 'Visit us: ' + '<a href="' url + '"></a>'; 
+  var html = name +'</br>' + address +'<br/>' + 'Visit us: ' + '<a href="' + url + '"></a>'; 
   infowindow.setContent(html); // show the html variable in the infowindow
   infowindow.setPosition(event.feature.getGeometry().get()); // anchor the infowindow at the marker
   infowindow.setOptions({pixelOffset: new google.maps.Size(0,-30)}); // move the infowindow up slightly to the top of the marker icon
