@@ -1,10 +1,7 @@
-//ArcGIS Map Javascript Code
+//ArcGIS Map Javascript Code for Midterm Assignment
+//KML layer data used.
 
-/*
- * Create a simple map with the ArcGIS JavaScript API.
- * example: http://developers.arcgis.com/javascript/samples/map_simple/
- */
-
+//Create a map
 var map;
 require([
   "esri/map",
@@ -13,35 +10,29 @@ require([
   //"esri/basemaps",
   "esri/dijit/BasemapToggle",    // modules need to be added to this list before dojo/domReady, separated by a comma and enclosed in quotation marks
   "dojo/domReady!"
-], function (
-  Map, KMLLayer, BasemapToggle
-   // the names of functions corresponding to the modules need to be added to this list, separated by a comma
-) {
+], function (Map, KMLLayer, BasemapToggle) {    //module names
   map = new Map("map", {
     basemap: "topo", // list of basemap names: https://developers.arcgis.com/javascript/jsapi/esri.basemaps-amd.html
     center: [-91, 30.5],
     zoom: 6
   });
-//for KML look for a "KML feed, .kml link, load from GitHub, not USB or computer ***
-//http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_month_age_link.kml
 
+//Create KML layer with data from USGS stream gauge service
 var streamgaugeurl = "http://waterwatch.usgs.gov/index.php?m=real&w=kml&r=us&regions=all2";
     var streamgauge = new KMLLayer(streamgaugeurl);
-    map.addLayer(streamgauge);
+    map.addLayer(streamgauge);   //add to map
 
+//Create KML layer with data from USGS flood service
 var floodurl = "http://waterwatch.usgs.gov/download/?gt=map&mt=flood&st=08&dt=site&ht=&fmt=kml";
     var flood = new KMLLayer(floodurl);
-    map.addLayer(flood);
+    map.addLayer(flood); //add to map
     
-var femaurl = "http://www.srh.noaa.gov/gis/kml/cocorahs/cocorahsLink.kml";
-    var fema = new KMLLayer(femaurl);
-    map.addLayer(fema);
-
+//Create a toggle button to switch between satellite view and topography view
   var toggle = new BasemapToggle({
     map:map,
     basemap: "satellite"
   }, "BasemapToggle");
   toggle.startup();
-  // code to add layers and map control goes here
+  
 
 });
