@@ -1,4 +1,6 @@
+//Google Maps With layers from GeoJson and KML
 
+//Create map
 var map;
 function initMap() {
  map = new google.maps.Map(document.getElementById('map'), {
